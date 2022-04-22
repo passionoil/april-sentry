@@ -11,12 +11,7 @@ Kotlin Multiplatform Sentry Wrapper
 
 ```kotlin
 repositories {
-    maven("https://maven.pkg.github.com/creatorclub/april-sentry") {
-        credentials {
-            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
-            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
-        }
-    }
+    maven("https://maven.pkg.github.com/creatorclub/april-sentry")
 }
 ```
 
