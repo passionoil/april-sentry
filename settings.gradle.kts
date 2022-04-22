@@ -1,4 +1,6 @@
-rootProject.name = "april-sentry"
+val name: String by extra
+
+rootProject.name = name
 
 pluginManagement {
     resolutionStrategy {

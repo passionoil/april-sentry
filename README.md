@@ -11,8 +11,11 @@ Kotlin Multiplatform Sentry Wrapper
 
 ```kotlin
 repositories {
-    maven {
-        url = uri("https://maven.pkg.github.com/creatorclub/april-sentry")
+    maven("https://maven.pkg.github.com/creatorclub/april-sentry") {
+        credentials {
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
+            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+        }
     }
 }
 ```
@@ -21,7 +24,7 @@ repositories {
 
 ```kotlin
 dependencies {
-    implementation("io.april.sentry:april-sentry:x.y.z")
+    implementation("io.april:april-sentry:x.y.z")
 }
 ```
 
@@ -29,7 +32,7 @@ dependencies {
 
 ```kotlin
 dependencies {
-    implementation("io.april.sentry:april-sentry-js:x.y.z")
+    implementation("io.april:april-sentry-js:x.y.z")
 }
 ```
 
@@ -37,7 +40,7 @@ dependencies {
 
 ```kotlin
 dependencies {
-    implementation("io.april.sentry:april-sentry-spring:x.y.z")
+    implementation("io.april:april-sentry-spring:x.y.z")
 }
 ```
 
@@ -46,7 +49,7 @@ dependencies {
 # Support
 
 - [x] Kotlin/JS
-  - [ ] <del>React</del>
+    - [ ] <del>React</del>
 - [x] Spring Boot
 - [ ] Android
 - [ ] iOS
