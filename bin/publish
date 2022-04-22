@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+./gradlew publishKotlinMultiplatformPublicationToGitHubPackagesRepository
+./gradlew publishJsPublicationToGitHubPackagesRepository
+./gradlew publishSpringPublicationToGitHubPackagesRepository
