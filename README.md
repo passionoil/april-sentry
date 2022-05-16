@@ -11,7 +11,7 @@ Kotlin Multiplatform Sentry Wrapper
 
 ```kotlin
 repositories {
-    maven("https://maven.pkg.github.com/creatorclub/april-sentry")
+    maven("https://maven.pkg.github.com/passionoil/april-sentry")
 }
 ```
 
